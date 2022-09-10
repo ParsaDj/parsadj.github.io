@@ -4,16 +4,14 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 const carouselText = [
-	{text: "My name is Parsa here is my Github card you can checkout my projects by clicking on it. ", color: "white"},
-	{text: "here is my list of skills", color: "orange"},
-  
+	{text: "My name is Parsa here is my Github card you can checkout my projects by clicking on it. ", color: "red"}
   ]
   
   $( document ).ready(async function() {
 	carousel(carouselText, "#feature-text")
   });
   
-  async function typeSentence(sentence, eleRef, delay = 50) {
+  async function typeSentence(sentence, eleRef, delay = 30) {
 	const letters = sentence.split("");
 	let i = 0;
 	while(i < letters.length) {
@@ -29,7 +27,7 @@ const carouselText = [
 	const letters = sentence.split("");
 	let i = 0;
 	while(letters.length > 0) {
-	  await waitForMs(50);
+	  await waitForMs(25);
 	  letters.pop();
 	  $(eleRef).html(letters.join(""));
 	}
